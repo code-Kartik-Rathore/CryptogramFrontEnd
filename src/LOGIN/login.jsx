@@ -58,9 +58,9 @@ import logo from "./Group-16352-1.png"
 //     console.log("Submitted:", userData);
 //   };
  const Login = (props) => {
-  const [username, setUsername] = useState("");
+  const [number, setNumber] = useState("");
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [PIN, setPIN] = useState('');
 
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -75,23 +75,27 @@ import logo from "./Group-16352-1.png"
             <img src={logo} className="img-fluid" alt="Sample" />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form">
               <div data-mdb-input-init className="form-outline mb-4">
+                <label className="form-label" htmlFor="form3Example3">
+                  Mobile Number
+                </label>
                 <input
                   id="form3Example3 username"
                   className="form-control form-control-lg"
-                  placeholder="Enter a valid username"
+                  placeholder="Enter a Mobile Number"
                   type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
                   required
                 />
-                <label className="form-label" htmlFor="form3Example3">
-                  Username
-                </label>
+                
               </div>
 
               <div data-mdb-input-init className="form-outline mb-4">
+                <label className="form-label" htmlFor="form3Example3">
+                  Email address
+                </label>
                 <input
                   type="email"
                   id="form3Example3 email"
@@ -101,24 +105,23 @@ import logo from "./Group-16352-1.png"
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <label className="form-label" htmlFor="form3Example3">
-                  Email address
-                </label>
+                
               </div>
 
               <div data-mdb-input-init className="form-outline mb-3">
+                <label className="form-label" htmlFor="form3Example4">
+                  PIN
+                </label>
                 <input
                   type="password"
                   id="form3Example4 password"
                   className="form-control form-control-lg"
-                  placeholder="Enter password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter PIN"
+                  value={PIN}
+                  onChange={(e) => setPIN(e.target.value)}
                   required
                 />
-                <label className="form-label" htmlFor="form3Example4">
-                  Password
-                </label>
+                
               </div>
 
               <div className="d-flex justify-content-between align-items-center">
@@ -161,8 +164,11 @@ import logo from "./Group-16352-1.png"
             </form>
             <div className="link-btn">
               <p>Don't have an account </p>
-              <Link to="/" type="submit" class="link-btn">
-                 Sign Up
+              <Link to="/sign" type="submit" class="link-btn">
+                Sign Up
+              </Link>
+              <Link to="/" type="submit" class= "link" >
+                Go to main page
               </Link>
             </div>
           </div>
