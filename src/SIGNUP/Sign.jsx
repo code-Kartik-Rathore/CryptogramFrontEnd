@@ -107,9 +107,9 @@ const Sign = () => {
             Login
           </Link>
         </div>
-        <Link to="/" type="submit" class="btn btn-primary">
+        {/* <Link to="/" type="submit" class="btn btn-primary">
           Go to main page
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
