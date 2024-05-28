@@ -164,12 +164,12 @@ import logo from "./Group-16352-1.png"
             </form>
             <div className="link-btn">
               <p>Don't have an account </p>
-              <Link to="/sign" type="submit" class="link-btn">
+              <Link to="/" type="submit" class="link-btn">
                 Sign Up
               </Link>
-              <Link to="/" type="submit" class= "link" >
+              {/* <Link to="/" type="submit" class= "link" >
                 Go to main page
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
