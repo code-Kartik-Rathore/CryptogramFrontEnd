@@ -31,6 +31,7 @@ const Sign = () => {
               type="tel"
               name="phone"
               id="phone"
+              maxLength={10}
               placeholder="Enter 10-Digit Mobile Number"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
@@ -106,6 +107,9 @@ const Sign = () => {
             Login
           </Link>
         </div>
+        <Link to="/" type="submit" class="btn btn-primary">
+          Go to main page
+        </Link>
       </div>
     </div>
   );
